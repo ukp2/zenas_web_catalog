@@ -11,9 +11,10 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT COLOR_OR_STYLE from catalog_for_website")
 colours = my_cur.fetchall()
-# my_cnx.close() 
+my_cnx.close() 
 
-streamlit.dataframe(colours) 
+#streamlit.dataframe(colours) 
+streamlit.select("Choose colour:", list(colours))
 
-# colours = colours.set_index('COLOR_OR_STYLE')
-streamlit.multiselect("Choose colour:", list(colours))
+
+streamlit.text('our warm')
