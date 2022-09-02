@@ -14,7 +14,7 @@ colours = my_cur.fetchall()
 my_cnx.close() 
 
 #streamlit.dataframe(colours) 
-streamlit.select("Choose colour:", list(colours))
+streamlit.singleselect("Choose colour:", list(colours))
 
 
 streamlit.text('our warm')
