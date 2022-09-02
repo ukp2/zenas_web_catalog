@@ -15,6 +15,6 @@ colour_list = my_cur.fetchall()
 
 streamlit.dataframe(colour_list) 
 
-colour_list = colour_list.set_index('color_or_style')
+# colour_list = colour_list.set_index('color_or_style')
 
-streamlit.multiselect("Pick colour:", list(colour_list.index,['Pink']) )
+streamlit.multiselect("Pick colour:", list(colour_list, ['Pink'])
