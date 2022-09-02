@@ -13,8 +13,8 @@ my_cur = my_cnx.cursor()
 my_cur.execute("SELECT COLOR_OR_STYLE from catalog_for_website")
 colours = my_cur.fetchall()
 
-colours = pandas.dataframe(colours)
-streamlit.text(colours)
+df = pandas.dataframe(colours)
+streamlit.text(df)
 
 # streamlit.selectbox('Choose colour:', list(colours))
 
