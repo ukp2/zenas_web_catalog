@@ -1,20 +1,24 @@
 import streamlit
 import pandas
-import requests
+# import requests
 import snowflake.connector
-from urllib.error import URLError
+# from urllib.error import URLError
 
-streamlit.header("Zena's Amazing Catalog")
-streamlit.text('Pick a sweatsuit colour or style') 
+streamlit.title("Zena's Amazing Catalog")
 
+#connect Snowflake
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
+#execute color
 my_cur.execute("SELECT COLOR_OR_STYLE from catalog_for_website")
 colours = my_cur.fetchall()
-my_cnx.close() 
+colours = pandas.dataframe(colours)
 
-#streamlit.dataframe(colours) 
-streamlit.singleselect("Choose colour:", list(colours))
+streamlit.selectbox('Choose colour:', list(colours))
 
 
 streamlit.text('our warm')
+
+
+
+my_cnx.close() 
