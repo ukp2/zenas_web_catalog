@@ -1,2 +1,2 @@
-import(streamlit)
+import streamlit
 streamlit.text('test')
