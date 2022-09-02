@@ -16,7 +16,7 @@ colours = my_cur.fetchall()
 colours = pandas.dataframe(colours)
 streamlit.text(colours)
 
-streamlit.selectbox('Choose colour:', list(colours))
+# streamlit.selectbox('Choose colour:', list(colours))
 
 
 streamlit.text('our warm')
