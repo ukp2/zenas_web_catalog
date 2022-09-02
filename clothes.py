@@ -16,4 +16,4 @@ my_cnx.close()
 streamlit.text(colour_list)
 streamlit.dataframe(colour_list) 
 
-# streamlit.multiselect("Pick colour:", list(colour_list.index),['Pink'])
+streamlit.multiselect("Pick colour:", list(colour_list),['Pink'])
