@@ -12,19 +12,22 @@ my_cur = my_cnx.cursor()
 #execute color
 my_cur.execute("SELECT COLOR_OR_STYLE from catalog_for_website") # to jest zaimportowane ze snowflake jako tupla
 colours = my_cur.fetchall() #colours to tupla
-     
-streamlit.text(colours)
-streamlit.dataframe(colours)
 
+streamlit.text('data from Snowflake')
+streamlit.text(colours)
+
+streamlit.text('Put data into st.dataframe')
+streamlit.dataframe(colours)
 streammlit.text(print(colours))
-    
+ 
+streamlit.text('Put data into pd.DataFrame')
 df = pandas.DataFrame(colours)
 streamlit.text(df)
 
 # streamlit.selectbox('Choose colour:', list(colours))
 
 
-streamlit.text('our warm')
+streamlit.text('our warm, comf /pink/ sweatuit')
 
 
 
