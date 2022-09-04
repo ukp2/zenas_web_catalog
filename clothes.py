@@ -16,6 +16,9 @@ colours = my_cur.fetchall()
 streamlit.text(colours)
 streamlit.dataframe(colours)
 
+streamlit.multiselect('select text',streamlit.text(colours) )
+streamlit.multiselect('select dataframe',streamlit.dataframe(colours) )
+
 df = pandas.DataFrame(colours)
 streamlit.text(df)
 
