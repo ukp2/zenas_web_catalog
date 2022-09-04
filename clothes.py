@@ -10,7 +10,7 @@ st.title("Zena's Amazing Catalog")
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
 #execute color
-my_cur.execute("SELECT COLOR_OR_STYLE from catalog_for_website")
+my_cur.execute("SELECT COLOR_OR_STYLE, PRICE from catalog_for_website")
 colours = my_cur.fetchall()
 
 # st.text('--data from Snowflake')
@@ -23,6 +23,8 @@ st.text('--Put data into pd.DataFrame')
 df = pd.DataFrame(colours)
 # st.text(df)
 st.write(df)
+
+st.text('--df0 values tolist)
 color_list = df[0].values.tolist()
 st.text(color_list)
 st.dataframe(color_list)
