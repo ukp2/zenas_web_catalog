@@ -26,7 +26,7 @@ st.write(df)
 
 
 st.text('--selectbox')
-st.selectbox('Choose colour:', list(colours))
+sel_col2 = st.selectbox('Choose colour:', list(colours))
 st.text('-- selectbox df')
 sel_col = st.selectbox('Choose colour:', list(df))
 # st.text('-- selectbox df2')
@@ -38,7 +38,7 @@ sel_col = st.selectbox('Choose colour:', list(df))
 # st.multiselect("Pick colour:", list(df) )
  
 st.write('our warm, comf', sel_col, 'sweatuit')
-
+st.write('our warm, comf', sel_col2, 'sweatuit')
 
 
 my_cnx.close() 
