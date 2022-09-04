@@ -48,7 +48,7 @@ sel_col = st.selectbox('Choose colour:', list(color_list))
 st.write('our warm, comf', sel_col, 'sweatuit')
 st.write('our warm, comf', sel_col2, 'sweatuit')
 
-product_desc = ('our warm, comf', sel_col, 'sweatuit')
-st.text(product_desc)
+product_desc = ('our warm, comf ' + sel_col + 'sweatuit')
+st.write(product_desc)
 
 my_cnx.close() 
