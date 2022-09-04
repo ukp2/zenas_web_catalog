@@ -49,6 +49,6 @@ st.write('our warm, comf', sel_col, 'sweatuit')
 st.write('our warm, comf', sel_col2, 'sweatuit')
 
 product_desc = ('our warm, comf', sel_col, 'sweatuit')
-print(product_desc)
+st.text(product_desc)
 
 my_cnx.close() 
