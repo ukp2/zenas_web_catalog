@@ -53,6 +53,7 @@ st.write(pict_desc)
 #execute pict
 my_cur.execute("SELECT DIRECT_URL from catalog_for_website where COLOR_OR_STYLE = '"+sel_col+"' ")
 pict_url = my_cur.fetchone()
+st.write(pict_url)
 
 # pict_url = 'https://uni-klaus.s3.us-west-2.amazonaws.com/clothing/royal_blue_sweatsuit.png/' , 
 st.image( pict_url , caption=pict_desc)
