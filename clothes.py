@@ -4,7 +4,7 @@ import pandas as pd
 import snowflake.connector
 # from urllib.error import URLError
 
-streamlit.title("Zena's Amazing Catalog")
+st.title("Zena's Amazing Catalog")
 
 #connect Snowflake
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
@@ -13,11 +13,11 @@ my_cur = my_cnx.cursor()
 my_cur.execute("SELECT COLOR_OR_STYLE, PRICE from catalog_for_website") # to jest zaimportowane ze snowflake jako tupla
 colours = my_cur.fetchall() #colours to tupla
 
-streamlit.text('data from Snowflake')
-streamlit.text(colours)
+st.text('data from Snowflake')
+st.text(colours)
 
-streamlit.text('Put data into st.dataframe')
-streamlit.dataframe(colours)
+st.text('Put data into st.dataframe')
+st.dataframe(colours)
  
 st.text('Put data into pd.DataFrame')
 df = pd.DataFrame(colours)
