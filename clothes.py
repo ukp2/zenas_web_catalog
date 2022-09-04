@@ -7,7 +7,7 @@ import snowflake.connector
 st.title("Zena's Amazing Catalog")
 
 #connect Snowflake
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
+my_cnx = snowflake.connector.connect(**st.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
 #execute color
 my_cur.execute("SELECT COLOR_OR_STYLE, PRICE from catalog_for_website") # to jest zaimportowane ze snowflake jako tupla
