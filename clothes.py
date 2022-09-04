@@ -44,17 +44,15 @@ sel_col = st.selectbox('Choose colour:', list(color_list))
 # st.text('multiselect colour df')
 # st.multiselect("Pick colour:", list(df) )
  
- 
+#caption - pict_desc
 st.write('our warm, comf', sel_col, 'sweatuit')
 st.write('our warm, comf', sel_col2, 'sweatuit')
-
-product_desc = ('our warm, comf ' + sel_col + ' sweatuit')
-st.write(product_desc)
-
+pict_desc = ('our warm, comf ' + sel_col + ' sweatuit')
+st.write(pict_desc)
 
 #execute pict
 my_cur.execute("SELECT DIRECT_URL from catalog_for_website")
-PICT = my_cur.fetchall()
-
+pict_url = my_cur.fetchall()
+st.image( pict_url , caption=pict_desc)
 
 my_cnx.close() 
