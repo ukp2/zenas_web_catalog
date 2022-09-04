@@ -18,7 +18,6 @@ streamlit.text(colours)
 
 streamlit.text('Put data into st.dataframe')
 streamlit.dataframe(colours)
-streammlit.text(print(colours))
  
 streamlit.text('Put data into pd.DataFrame')
 df = pandas.DataFrame(colours)
