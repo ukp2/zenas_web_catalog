@@ -51,8 +51,10 @@ pict_desc = ('our warm, comf ' + sel_col + ' sweatuit')
 st.write(pict_desc)
 
 #execute pict
-my_cur.execute("SELECT DIRECT_URL from catalog_for_website")
+my_cur.execute("SELECT DIRECT_URL from catalog_for_website where COLOR_OR_STYLE = sel_col ")
 pict_url = my_cur.fetchall()
+
+# pict_url = 'https://uni-klaus.s3.us-west-2.amazonaws.com/clothing/royal_blue_sweatsuit.png/' , 
 st.image( pict_url , caption=pict_desc)
 
 my_cnx.close() 
