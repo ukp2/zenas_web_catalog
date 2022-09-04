@@ -15,17 +15,21 @@ colours = my_cur.fetchall() #colours to tupla
 
 st.text('data from Snowflake')
 st.text(colours)
-
 st.text('Put data into st.dataframe')
 st.dataframe(colours)
- 
 st.text('Put data into pd.DataFrame')
 df = pd.DataFrame(colours)
 st.text(df)
 
-# streamlit.selectbox('Choose colour:', list(colours))
-
-
+st.text('selectbox')
+st.selectbox('Choose colour:', list(colours))
+st.text('selectbox df')
+st.selectbox('Choose colour:', list(df))
+st.text('multiselect colour')
+st.multiselect("Pick colour:", list(colours,['Pink'])
+st.text('multiselect colour df')
+st.multiselect("Pick colour:", list(df)
+ 
 st.text('our warm, comf /pink/ sweatuit')
 
 
