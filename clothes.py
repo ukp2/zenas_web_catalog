@@ -27,11 +27,10 @@ st.write(df)
 
 st.text('--selectbox')
 st.selectbox('Choose colour:', list(colours))
-st.text('-- selectbox df2')
-st.selectbox('Choose colour:', list(df2))
 st.text('-- selectbox df')
 st.selectbox('Choose colour:', list(df))
-
+st.text('-- selectbox df2')
+st.selectbox('Choose colour:', list(df2))
 
 # st.text('multiselect colour')
 # st.multiselect("Pick colour:", list(colours) )
