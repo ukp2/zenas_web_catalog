@@ -10,7 +10,7 @@ st.title("Zena's Amazing Catalog")
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
 #execute color
-my_cur.execute("SELECT COLOR_OR_STYLE, PRICE from catalog_for_website")
+my_cur.execute("SELECT COLOR_OR_STYLE from catalog_for_website")
 colours = my_cur.fetchall()
 
 # st.text('--data from Snowflake')
@@ -23,12 +23,15 @@ st.text('--Put data into pd.DataFrame')
 df = pd.DataFrame(colours)
 # st.text(df)
 st.write(df)
-
+color_list = df[0].values.tolist()
+st.text(color_list)
+st.dataframe(color_list)
+st.write(color_list)
 
 st.text('--selectbox')
 sel_col2 = st.selectbox('Choose colour:', list(colours))
-st.text('-- selectbox df')
-sel_col = st.selectbox('Choose colour:', list(df))
+st.text('-- selectbox df - color_list')
+sel_col = st.selectbox('Choose colour:', list(color_list))
 # st.text('-- selectbox df2')
 # st.selectbox('Choose colour:', list(df2))
 
@@ -36,6 +39,7 @@ sel_col = st.selectbox('Choose colour:', list(df))
 # st.multiselect("Pick colour:", list(colours) )
 # st.text('multiselect colour df')
 # st.multiselect("Pick colour:", list(df) )
+ 
  
 st.write('our warm, comf', sel_col, 'sweatuit')
 st.write('our warm, comf', sel_col2, 'sweatuit')
