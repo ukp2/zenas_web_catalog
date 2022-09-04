@@ -25,11 +25,12 @@ st.text('selectbox')
 st.selectbox('Choose colour:', list(colours))
 st.text('selectbox df')
 st.selectbox('Choose colour:', list(df))
+st.write(df)
 
-st.text('multiselect colour')
-st.multiselect("Pick colour:", list(colours) )
-st.text('multiselect colour df')
-st.multiselect("Pick colour:", list(df) )
+# st.text('multiselect colour')
+# st.multiselect("Pick colour:", list(colours) )
+# st.text('multiselect colour df')
+# st.multiselect("Pick colour:", list(df) )
  
 st.text('our warm, comf /pink/ sweatuit')
 
