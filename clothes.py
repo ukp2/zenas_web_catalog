@@ -21,14 +21,17 @@ df2 = st.dataframe(colours)
 st.text(df2)
 st.text('--Put data into pd.DataFrame')
 df = pd.DataFrame(colours)
-
-
-st.text('selectbox')
-st.selectbox('Choose colour:', list(colours))
-st.write(colours)
-st.text('selectbox df')
-st.selectbox('Choose colour:', list(df))
+st.text(df)
 st.write(df)
+
+
+st.text('--selectbox')
+st.selectbox('Choose colour:', list(colours))
+st.text('-- selectbox df2')
+st.selectbox('Choose colour:', list(df2))
+st.text('-- selectbox df')
+st.selectbox('Choose colour:', list(df))
+
 
 # st.text('multiselect colour')
 # st.multiselect("Pick colour:", list(colours) )
