@@ -57,8 +57,8 @@ st.write(pict_data)
 st.write(pict_data[0])
 st.image(pict_data[0], width=400, caption=pict_desc)
 
-st.write('PRICE:',pict_data[1])
-st.write('SIZES: ',pict_data[2])
-st.write(pict_data[3])
+# st.write('PRICE:',pict_data[1])
+# st.write('SIZES: ',pict_data[2])
+# st.write(pict_data[3])
 
 my_cnx.close() 
