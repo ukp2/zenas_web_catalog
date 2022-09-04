@@ -23,7 +23,7 @@ st.text(df)
 
 st.text('selectbox')
 st.selectbox('Choose colour:', list(colours))
-st.write(colour)
+st.write(colours)
 st.text('selectbox df')
 st.selectbox('Choose colour:', list(df))
 st.write(df)
