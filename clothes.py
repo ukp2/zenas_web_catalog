@@ -25,8 +25,9 @@ st.text('selectbox')
 st.selectbox('Choose colour:', list(colours))
 st.text('selectbox df')
 st.selectbox('Choose colour:', list(df))
+
 st.text('multiselect colour')
-st.multiselect("Pick colour:", list(colours,['Pink']) )
+st.multiselect("Pick colour:", list(colours) )
 st.text('multiselect colour df')
 st.multiselect("Pick colour:", list(df) )
  
