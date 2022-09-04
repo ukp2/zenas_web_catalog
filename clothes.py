@@ -10,12 +10,15 @@ streamlit.title("Zena's Amazing Catalog")
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
 #execute color
-my_cur.execute("SELECT * from catalog_for_website") # COLOR_OR_STYLE
-colours = my_cur.fetchall()
-
+my_cur.execute("SELECT COLOR_OR_STYLE from catalog_for_website") # to jest zaimportowane ze snowflake jako tupla
+colours = my_cur.fetchall() #colours to tupla
+     
 streamlit.text(colours)
 streamlit.dataframe(colours)
 
+For k in sorted(colours) :
+    print(k)   
+    
 df = pandas.DataFrame(colours)
 streamlit.text(df)
 
