@@ -10,14 +10,11 @@ streamlit.title("Zena's Amazing Catalog")
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
 #execute color
-my_cur.execute("SELECT COLOR_OR_STYLE from catalog_for_website")
+my_cur.execute("SELECT * from catalog_for_website") -- COLOR_OR_STYLE
 colours = my_cur.fetchall()
 
 streamlit.text(colours)
 streamlit.dataframe(colours)
-
-streamlit.multiselect('select text',streamlit.text(colours) )
-streamlit.multiselect('select dataframe',streamlit.dataframe(colours) )
 
 df = pandas.DataFrame(colours)
 streamlit.text(df)
