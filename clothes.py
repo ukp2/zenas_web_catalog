@@ -10,7 +10,7 @@ streamlit.title("Zena's Amazing Catalog")
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake2"])
 my_cur = my_cnx.cursor()
 #execute color
-my_cur.execute("SELECT * from catalog_for_website") -- COLOR_OR_STYLE
+my_cur.execute("SELECT * from catalog_for_website") # COLOR_OR_STYLE
 colours = my_cur.fetchall()
 
 streamlit.text(colours)
