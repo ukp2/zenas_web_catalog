@@ -48,7 +48,13 @@ sel_col = st.selectbox('Choose colour:', list(color_list))
 st.write('our warm, comf', sel_col, 'sweatuit')
 st.write('our warm, comf', sel_col2, 'sweatuit')
 
-product_desc = ('our warm, comf ' + sel_col + 'sweatuit')
+product_desc = ('our warm, comf ' + sel_col + ' sweatuit')
 st.write(product_desc)
+
+
+#execute pict
+my_cur.execute("SELECT DIRECT_URL from catalog_for_website")
+PICT = my_cur.fetchall()
+
 
 my_cnx.close() 
