@@ -16,7 +16,7 @@ colours = my_cur.fetchall() #colours to tupla
 streamlit.text(colours)
 streamlit.dataframe(colours)
 
-print(colours)
+streammlit.text(print(colours))
     
 df = pandas.DataFrame(colours)
 streamlit.text(df)
