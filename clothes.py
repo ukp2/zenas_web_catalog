@@ -53,8 +53,8 @@ st.write(pict_desc)
 #execute pict
 my_cur.execute("SELECT DIRECT_URL from catalog_for_website where COLOR_OR_STYLE = '"+sel_col+"' ")
 pict_data = my_cur.fetchone()
-st.write(pict_url)
-
+st.write(pict_data)
+st.write(pict_data[0])
 st.image(pict_data[0], width=400, caption=pict_desc)
 
 my_cnx.close() 
