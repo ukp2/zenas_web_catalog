@@ -13,15 +13,15 @@ my_cur = my_cnx.cursor()
 my_cur.execute("SELECT COLOR_OR_STYLE, PRICE from catalog_for_website")
 colours = my_cur.fetchall()
 
-st.text('--data from Snowflake')
-st.text(colours)
-st.text('--Put data into st.dataframe')
-st.dataframe(colours)
-df2 = st.dataframe(colours)
-st.text(df2)
+# st.text('--data from Snowflake')
+# st.text(colours)
+# st.text('--Put data into st.dataframe')
+# st.dataframe(colours)
+# df2 = st.dataframe(colours)
+# st.text(df2)
 st.text('--Put data into pd.DataFrame')
 df = pd.DataFrame(colours)
-st.text(df)
+# st.text(df)
 st.write(df)
 
 
@@ -37,7 +37,7 @@ sel_col = st.selectbox('Choose colour:', list(df))
 # st.text('multiselect colour df')
 # st.multiselect("Pick colour:", list(df) )
  
-st.text('our warm, comf', sel_col, 'sweatuit')
+st.write('our warm, comf', sel_col, 'sweatuit')
 
 
 
